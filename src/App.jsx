@@ -1,18 +1,10 @@
 import { useState } from "react";
 import { Routes, Route } from "react-router-dom";
+import Red from "./Routes/Red";
+import Green from "./Routes/Green";
+import Blue from "./Routes/Blue";
 import "./App.css";
 
-function Red() {
-  return <div className="page red">Red</div>;
-}
-
-function Green() {
-  return <div className="page green">Green</div>;
-}
-
-function Blue() {
-  return <div className="page blue">Blue</div>;
-}
 
 function App() {
   return (
