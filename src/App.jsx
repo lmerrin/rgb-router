@@ -1,13 +1,29 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-     </>
-  )
+function Red() {
+  return <div className="page red">Red</div>;
 }
 
-export default App
+function Green() {
+  return <div className="page green">Green</div>;
+}
+
+function Blue() {
+  return <div className="page blue">Blue</div>;
+}
+
+function App() {
+  return (
+    <>
+      <Routes>
+        <Route path="/" element={<Red />} />
+        <Route path="/green" element={<Green />} />
+        <Route path="/blue" element={<Blue />} />
+      </Routes>
+    </>
+  );
+}
+
+export default App;
