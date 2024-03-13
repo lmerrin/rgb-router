@@ -1,8 +1,9 @@
 import "./App.css";
-import { Routes, Route, NavLink, useNavigate } from "react-router-dom";
+import { Routes, Route, NavLink, useNavigate, useParams } from "react-router-dom";
 import Red from "./Routes/Red";
 import Green from "./Routes/Green";
 import Blue from "./Routes/Blue";
+import DynamicColorPage from "./Routes/DynamicColorPage";
 
 function App() {
   const navigate = useNavigate();
@@ -37,6 +38,7 @@ function App() {
         <Route path="/" element={<Red />} />
         <Route path="/green" element={<Green />} />
         <Route path="/blue" element={<Blue />} />
+        <Route path="/:hexColor" element={<DynamicColorPage />} />
       </Routes>
     </>
   );
